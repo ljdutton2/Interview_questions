@@ -32,5 +32,28 @@ variable_table.add_row(["counter", 9])
 
 print(variable_table)
 
+"""
+Given a sorted array nums, remove the duplicates in-place such that each element 
+appear only once and return the new length.
+
+
+
+"""
+def remove_duplicates(nums):
+    new = []
+    for i in nums:
+        if i not in new:
+            new.append(i)
+    return len(new)
+
+#print(remove_duplicates([0,1,2,3,4,4]))
+variable_table2 = PrettyTable()
+variable_table2.field_names = ["Variable",  "Value"]
+variable_table2.add_row(["new", "empty list"])
+variable_table2.add_row(["i", "each iteration"])
+variable_table2.add_row(["nums", [0,1,2,3,4,4]])
+variable_table2.add_row(["new", 5])
+print(variable_table2)
+
 
 
