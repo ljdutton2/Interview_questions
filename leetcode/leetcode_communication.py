@@ -43,10 +43,14 @@ I used a slice operation to reverse the string, if it is the same backwards, it 
 def is_palindrome(int):
     int = str(int)
     if int != 0:
-
         if int == (int)[::-1]:
             return True
         else: 
            return False
+           
+           
+if __name__ == "__main__":
 
-is_palindrome(1221)
+    is_palindrome(1221)
+ 
+    
