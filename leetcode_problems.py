@@ -22,5 +22,31 @@ def two_sum(nums,target):
                 return i,j
         
 
-print(two_sum([0,1,2,3],2))
+#print(two_sum([0,1,2,3],2))
 
+""" 
+Leetcode Problem: Determine whether an integer is a palindrome. 
+
+
+Restated: I am going to see if a given number reads the same forwards and backwards
+
+Clarifying Questions: Will there be any floats, or negative numbers?
+
+State Assumptions: I am assuming no, there will not be ^ 
+
+Explain Rationale: First I turned it into a string, so I could access the individual elements 
+I used a slice operation to reverse the string, if it is the same backwards, it is palindrome
+, 
+
+"""
+
+def is_palindrome(int):
+    int = str(int)
+    if int != 0:
+
+        if int == (int)[::-1]:
+            return True
+        else: 
+           return False
+
+is_palindrome(1221)
