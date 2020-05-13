@@ -2,8 +2,12 @@
  amongst an array of strings.If there is no common prefix, 
  return an empty string ""."""
 
- 
- 
+ #the time complexity of this is O(1) because no matter how large
+ #the data set, as long as the array is sorted we only need to
+ #compare the largest and the smallest string
+
+
+
 def common_prefix(array):
     if not array:
             return ""
