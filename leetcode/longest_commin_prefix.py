@@ -9,6 +9,7 @@ def common_prefix(array):
             return ""
     min_ = min(array)
     max_ = max(array)
+    array = array.sort()
     if not min_:
         return ""
     for i in range(len(min_)):
@@ -16,6 +17,6 @@ def common_prefix(array):
             return max_[:i]
     return min_[:]
 
-array = ["flower", "florist","floral", "fleet"]
+array = ["flower", "florist","floral", "fleet", "find"]
 print(common_prefix(array))
     
