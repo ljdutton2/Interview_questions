@@ -14,7 +14,6 @@ def findHighFrequencyWords (ls_words, k):
 			dict[word] = 1
 		else:
 			dict[word] +=1
-	
 	#store a list of the high freq elements as a tuple checking k length of list
     ls_sorted = [ (‘a’,0) ]
         for key,value in zip(dict.keys(),dict.values()):
@@ -23,7 +22,6 @@ def findHighFrequencyWords (ls_words, k):
                     ls_sorted.pop(0)
                 ls_sorted.append( (key,value) )
                 ls_sorted.sort() #sort by index [1], don’t know the syntax
-
     #sort them in decreasing order, then output only the words
     ls_sorted[::-1]
     ls_outputText = “”
@@ -32,5 +30,23 @@ def findHighFrequencyWords (ls_words, k):
     return ls_outputText
 
 print(findHighFrequencyWords("Red fish blue fish one fish two fish",3))
+
+
+
+#Given a list of n numbers, determine if it contains any duplicate numbers
+
+
+def find_duplicate(arr):
+    arr.sort()
+    last = 0
+    for i in arr:
+        if last == arr[i]:
+            return arr[i]
+        last = arr[i]
+
+if __name__ == '__main__':
+    arr = [6,1,3,4,6,7,9]
+    #1346679
+    print(find_duplicate(arr))
 
 		
