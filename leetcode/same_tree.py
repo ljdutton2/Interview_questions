@@ -23,6 +23,8 @@ class Solution():
             if a.data == z.data:
                 return self.same_tree(a.left,z.left) and self.same_tree(a.right,z.right)
         return False
+
+        
 solution = Solution()
 a = Node(1)
 z = Node(1)
